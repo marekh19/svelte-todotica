@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "svelte-todotica",
+  "main": ".svelte-kit/cloudflare/_worker.js",
+  "compatibility_date": "2025-01-21",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".svelte-kit/cloudflare",
+    "not_found_handling": "single-page-application",
+  },
+  "env": {
+    "production": {
+      "workers_dev": false,
+      "routes": [{ "pattern": "todotica.marek.work", "custom_domain": true }],
+    },
+  },
+}
